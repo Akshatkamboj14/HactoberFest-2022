@@ -27,5 +27,5 @@ class MainViewModel(val context: Context):ViewModel() {
 
     fun nextQuote() = quoteList[++index]
 
-    fun previousQuote() = quoteList[--index]
+    fun previousQuote() = if (index != 0) {quoteList[--index]} else {quoteList[index]}
 }
